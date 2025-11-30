@@ -75,7 +75,7 @@ def center_print(
 
 def print_no_pending_tasks() -> None:
     center_print(
-        f'[{msg_pending_style}]Looking good, no pending tasks[/] ✨ 🍰 ✨'
+        f'[{msg_pending_style}]Looking good, no pending tasks[/]  '
     )
 
 
@@ -131,10 +131,10 @@ def quotes(show: bool = True) -> None:
     )
 
 
-@app.command('tasks', short_help='Show all Tasks :open_book:')
-@app.command(short_help='[s]Show all Tasks :open_book:[/]', deprecated=True)
+@app.command('tasks', short_help='Show all Tasks')
+@app.command(short_help='[s]Show all Tasks [/]', deprecated=True)
 def showtasks() -> None:
-    """Show all Tasks :open_book:"""
+    """Show all Tasks  """
     task_table = Table(
         header_style=table_header_style,
         style=table_header_style,
@@ -176,7 +176,7 @@ def print_tasks(force_print: bool = False) -> None:
 @app.command()
 def add(task: str) -> None:
     """
-    [bold green]Add[/bold green] a Task :sparkles:
+    [bold green]Add[/bold green] a Task  
     [light_slate_grey italic](Add task name inside quotes)[/]
     """
     new_task = {'name': task, 'done': False}
@@ -325,7 +325,7 @@ def delete(task_id: int) -> None:
 
 @app.command()
 def move(old_id: int, new_id: int) -> None:
-    """Change task position by floating 🎈 or sinking ⚓"""
+    """Change task position by floating or sinking  """
     settings = Settings().get_settings()
     if not settings['tasks']:
         center_print(
@@ -399,7 +399,7 @@ def move(old_id: int, new_id: int) -> None:
 
 @app.command()
 def swap(old_id: int, new_id: int) -> None:
-    """Swap the positions of two tasks 🔀"""
+    """Swap the positions of two tasks """
     settings = Settings().get_settings()
     if not settings['tasks']:
         center_print(
@@ -454,7 +454,7 @@ def swap(old_id: int, new_id: int) -> None:
 
 @app.command()
 def clear() -> None:
-    """Clear all tasks :wastebasket:"""
+    """Clear all tasks  """
     typer.confirm('Are you sure you want to delete all tasks?', abort=True)
     settings = Settings().get_settings()
     settings['tasks'] = []
@@ -467,7 +467,7 @@ def clear() -> None:
 
 @app.command()
 def clean() -> None:
-    """Clean up tasks marked as done :broom:"""
+    """Clean up tasks marked as done  """
     typer.confirm('Are you sure you want to delete all done tasks?', abort=True)
     settings = Settings().get_settings()
     settings['tasks'] = Settings().get_all_tasks_undone()
@@ -480,20 +480,20 @@ def clean() -> None:
 
 @app.command(rich_help_panel='Integration')
 def count_done() -> None:
-    """Count done tasks :chart_increasing:"""
+    """Count done tasks  """
     typer.echo(Settings().count_tasks_done())
 
 
 @app.command(rich_help_panel='Integration')
 def count_undone() -> None:
-    """Count undone tasks :chart_decreasing:"""
+    """Count undone tasks  """
     typer.echo(Settings().count_tasks_undone())
 
 
 @app.command(rich_help_panel='Utils and Configs')
 def callme(name: str) -> None:
     """
-    Change name :name_badge: [light_slate_grey italic]
+    Change name   [light_slate_grey italic]
     (without resetting data)[/]
     """
     settings = Settings().get_settings()
@@ -510,7 +510,7 @@ def callme(name: str) -> None:
 
 @app.command(rich_help_panel='Utils and Configs')
 def setup() -> None:
-    """Reset all data and run setup :wrench:"""
+    """Reset all data and run setup  """
     settings: dict = {}
     settings['user_name'] = typer.prompt(
         typer.style('Hello! What can I call you?', fg=typer.colors.CYAN)
@@ -591,7 +591,7 @@ def setup() -> None:
 @app.callback(
     invoke_without_command=True,
     epilog=(
-        'Made with [red]:heart:[/red] by '
+        'Made with [red] [/red] by '
         '[link=https://github.com/guedesfelipe/pls-cli]Felipe Guedes[/link]'
     ),
 )
@@ -636,21 +636,21 @@ def show(ctx: typer.Context) -> None:
 
 @app.command(rich_help_panel='Utils and Configs')
 def version():
-    """Show version :bookmark:"""
+    """Show version  """
     typer.echo(f'pls CLI Version: {__version__}')
     raise typer.Exit()
 
 
 @app.command(rich_help_panel='Utils and Configs')
 def docs():
-    """Launch docs Website :globe_with_meridians:"""
+    """Launch docs Website  """
     center_print(Rule('・Opening [#FFBF00]PLS-CLI[/] docs・', style='#d77dd8'))
     typer.launch('https://guedesfelipe.github.io/pls-cli/')
 
 
 @app.command(rich_help_panel='Utils and Configs')
 def config():
-    """Show config directory path :open_file_folder:"""
+    """Show config directory path  """
     config_path = Settings().get_full_settings_path()
     center_print(Rule('・Config directory・', style='#d77dd8'))
     console.print(f'\n[#61E294]Path:[/] [bold]{config_path}[/]\n')
@@ -659,7 +659,7 @@ def config():
 @app.command()
 def edit(task_id: int, task: str):
     """
-    [bold yellow]Edit[/bold yellow] a task by id ✏️ [light_slate_grey italic]
+    [bold yellow]Edit[/bold yellow] a task by id ✏ [light_slate_grey italic]
     (Add task name inside quotes)[/]
     """
     settings = Settings().get_settings()

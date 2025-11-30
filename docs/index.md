@@ -1,5 +1,5 @@
 <h1 align="center">
-  💻  PLS-CLI
+      PLS-CLI
 </h1>
 <p align="center">
     <a href="https://github.com/guedesfelipe/pls-cli/actions/workflows/ci.yml" target="_blank">
@@ -65,7 +65,7 @@
         pip install pls-cli --upgrade
         ```
 
-## ⚙️ Configuration
+## ⚙ Configuration
 
 To run **`pls-cli`** everytime you open your shell's:
 
@@ -118,7 +118,7 @@ To run **`pls-cli`** everytime you open your shell's:
 
     Restart your terminal to apply the changes and start configuring your PLS-CLI. 🎉
 
-## 🤝 Special thanks
+##    Special thanks
 
 **PLS-CLI** stands on the shoulders of giants:
 

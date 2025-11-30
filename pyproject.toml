@@ -37,6 +37,7 @@ dev = [
     "mkdocs-material>=9.2.7",
     "mkdocs-meta-descriptions-plugin>=3.0.0",
     "types-setuptools>=69.0.0",
+    "emoji>=2.15.0",
 ]
 
 [project.urls]

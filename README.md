@@ -50,7 +50,7 @@ pip install pls-cli
 
 > **Note**: Installing with pip may cause dependency conflicts with other packages. We recommend using pipx for CLI tools.
 
-# ⬆️ Upgrade version
+# ⬆ Upgrade version
 
 ## With pipx (recommended)
 
@@ -64,7 +64,7 @@ pipx upgrade pls-cli
 pip install pls-cli --upgrade
 ```
 
-# ⚙️ Configuration
+# ⚙ Configuration
 
 To run **`pls-cli`** everytime you open your shell's:
 
@@ -125,9 +125,9 @@ pls
 
 </details>
 
-⚠️ Restart your terminal to apply the changes and start configuring your PLS-CLI. 🎉
+⚠ Restart your terminal to apply the changes and start configuring your PLS-CLI. 🎉
 
-# ⌨️ Commands
+# ⌨ Commands
 
 ```sh
 pls --help
@@ -192,7 +192,7 @@ export PLS_QUOTE_STYLE="#a0a0a0 on blue"
 
 </details>
 
-If you create some theme, share with us <a href="https://github.com/guedesfelipe/pls-cli/discussions/1#discussion-4174647" target="_blank">here</a> ♥️.
+If you create some theme, share with us <a href="https://github.com/guedesfelipe/pls-cli/discussions/1#discussion-4174647" target="_blank">here</a> ♥.
 
 ## 💄 Formatting a task
 
