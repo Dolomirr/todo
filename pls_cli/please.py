@@ -103,7 +103,7 @@ def print_tasks_progress() -> None:
 
 @app.command('tasks-progress', rich_help_panel='Utils and Configs')
 def tasks_progress(show: bool = True) -> None:
-    """Show tasks progress 🎯"""
+    """Show tasks progress"""
     settings = Settings().get_settings()
     settings['show_task_progress'] = show
     Settings().write_settings(settings)
